@@ -6,7 +6,7 @@ import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.ExperimentalPagingApi
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviedb.R
 import com.example.moviedb.model.Movie
 import com.example.moviedb.ui.viewmodel.LoaderStateAdapter
@@ -40,7 +40,7 @@ class MainFragment : Fragment(R.layout.fragment_main), PagingAdapter.OnMovieClic
     }
 
     private fun setUpViews() {
-        movieContainer.layoutManager = GridLayoutManager(context, 2)
+        movieContainer.layoutManager = LinearLayoutManager(context)
         movieContainer.adapter = adapter.withLoadStateFooter(loaderStateAdapter)
     }
 
