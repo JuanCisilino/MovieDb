@@ -1,4 +1,4 @@
-package com.example.moviedb.network
+package com.example.moviedb.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

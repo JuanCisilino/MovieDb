@@ -1,4 +1,6 @@
-package com.example.moviedb.network
+package com.example.moviedb.repository
+
+import com.example.moviedb.network.AppDatabase
 
 object LocalInjector {
 

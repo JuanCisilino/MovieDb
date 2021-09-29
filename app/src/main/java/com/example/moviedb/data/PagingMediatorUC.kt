@@ -6,17 +6,16 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.moviedb.model.Movie
 import com.example.moviedb.network.AppDatabase
-import com.example.moviedb.network.LocalInjector
-import com.example.moviedb.network.RetrofitClient
+import com.example.moviedb.repository.LocalInjector
 import com.example.moviedb.repository.RemoteInjector
 import com.example.moviedb.repository.RepoMovies
 import kotlinx.coroutines.flow.Flow
 
 @ExperimentalPagingApi
-class PagingMediatorUC(private val webService: RepoMovies = RemoteInjector.injectDoggoApiService(),
+class PagingMediatorUC(private val webService: RepoMovies = RemoteInjector.injectRetrofitApiService(),
                        private val appDatabase: AppDatabase? = LocalInjector.injectDb()){
 
-    fun getInstance() = PagingMediatorUC(RetrofitClient.webService)
+    fun getInstance() = PagingMediatorUC(RemoteInjector.injectRetrofitApiService())
 
     private fun getDefaultPageConfig(): PagingConfig {
         return PagingConfig(

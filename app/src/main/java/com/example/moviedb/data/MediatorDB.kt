@@ -6,12 +6,11 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.example.moviedb.model.Movie
-import com.example.moviedb.network.RemoteKeys
+import com.example.moviedb.model.RemoteKeys
 import com.example.moviedb.network.AppDatabase
 import com.example.moviedb.repository.RepoMovies
 import retrofit2.HttpException
 import java.io.IOException
-import java.io.InvalidObjectException
 
 @ExperimentalPagingApi
 class MediatorDB (private val webservice: RepoMovies, private val appDatabase: AppDatabase) :

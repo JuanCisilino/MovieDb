@@ -2,7 +2,7 @@ package com.example.moviedb
 
 import android.app.Application
 import com.example.moviedb.network.AppDatabase
-import com.example.moviedb.network.LocalInjector
+import com.example.moviedb.repository.LocalInjector
 
 class MovieApplication: Application() {
 

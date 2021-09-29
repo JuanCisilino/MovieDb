@@ -9,7 +9,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Entity
 data class Movie(
-
     @PrimaryKey
     var id: Int = 0,
     var title: String = "",

@@ -8,7 +8,7 @@ object RemoteInjector {
 
     const val API_ENDPOINT = "https://api.themoviedb.org/3/"
 
-    fun injectDoggoApiService(retrofit: Retrofit = getRetrofit()): RepoMovies {
+    fun injectRetrofitApiService(retrofit: Retrofit = getRetrofit()): RepoMovies {
         return retrofit.create(RepoMovies::class.java)
     }
 
