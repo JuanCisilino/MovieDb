@@ -1,2 +1,2 @@
 # MovieDb
-Challenge Movie TMDB
+Consuming TMDB api
